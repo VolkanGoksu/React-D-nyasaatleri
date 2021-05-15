@@ -20,6 +20,7 @@ export default function Citys() {
     }
 
     const searchCity=(e)=>{
+        
          var bar = e.target.value
          setCitysSup((oldCitys)=>{
             return citys.filter(c=>{

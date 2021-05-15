@@ -8,7 +8,7 @@ function App() {
     <Router>
       <Switch>
         <Route path = '/' component={Citys} exact/>
-        <Route path = '/kita/:id' component={Clock} />
+        <Route path = '/:kita/:yer' component={Clock} />
       </Switch>
     </Router>
    
