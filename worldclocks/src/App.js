@@ -1,11 +1,17 @@
 import Citys from './components/Citys'
+import Clock from './components/Clock'
+import  {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
+
 
 function App() {
   return (
-    <div className = "App">
-       <Citys />
-    </div>
-  );
-}
-
+    <Router>
+      <Switch>
+        <Route path = '/' component={Citys} exact/>
+        <Route path = '/kita/:id' component={Clock} />
+      </Switch>
+    </Router>
+   
+  )
+ }
 export default App;

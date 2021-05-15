@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import {Link} from 'react-router-dom'
 
 export default function Citys() {
 
@@ -42,24 +43,29 @@ export default function Citys() {
                     citysSup!=null?
                     (
                         citysSup.map(city => (
-                            <div className="col l3 m3 s6" key={city}>
+                            <Link to={`/${city}`} key={city}>
+                             
+                            <div className="col l3 m3 s6">
                                 <div className="card blue-grey" >
                                     <div className="card-content white-text">
                                         <p>{city}</p>
                                     </div>
                                 </div>
                             </div>
+                            </Link>
                         ))
                     ):
                     (
                         citys.map(city => (
-                            <div className="col l3 m3 s6" key={city}>
+                            <Link to={`/${city}`} key={city}>
+                            <div className="col l3 m3 s6">
                                 <div className="card blue-grey" >
                                     <div className="card-content white-text">
                                         <p>{city}</p>
                                     </div>
                                 </div>
                             </div>
+                            </Link>
                         ))
                     )
                 }
